@@ -61,7 +61,41 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+				<configuration>
+
+					<!-- Container configuration -->
+					<container>
+						<containerId>tomcat8x</containerId>
+						<output>${project.build.directory}/cargo-tomcat/container.log</output>
+						<append>false</append>
+						<log>${project.build.directory}/cargo-tomcat/cargo.log</log>
+					</container>
+
+					<!-- Configuration to use with the container -->
+					<configuration>
+						<home>${project.build.directory}/cargo-tomcat</home>
+						<properties>
+							<cargo.servlet.port>8080</cargo.servlet.port>
+						</properties>
+					</configuration>
+
+					<deployables>
+						<deployable>
+							<groupId>${project.groupId}</groupId>
+							<artifactId>${project.artifactId}</artifactId>
+							<type>war</type>
+							<properties>
+								<context>/app</context>
+							</properties>
+						</deployable>
+					</deployables>
+
+				</configuration>
+            </plugin>
+        </plugins>
 	</build>
 
 
