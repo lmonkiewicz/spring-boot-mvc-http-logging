@@ -15,3 +15,4 @@ For _war_ deployment using _cargo_ with _tomcat8x_ container, use:
 <code>
 mvn clean install cargo:run
 </code>
+
