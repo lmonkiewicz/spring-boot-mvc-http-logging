@@ -44,6 +44,9 @@
     <!--Enables logging of request at HTTP level, not yet parsed data. Requires configured bean of CommonsRequestLoggingFilter-->
     <logger name="org.springframework.web.filter.CommonsRequestLoggingFilter" level="TRACE"/>
 
+    <!--Enables logging of request/response body of RestTemplate requests. Requires Apache Http Components client as RestTemplate requestFactory-->
+    <logger name="org.apache.http.wire" level="DEBUG"/>
+
 
 
     <root level="@logback.loglevel@">
