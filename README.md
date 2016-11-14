@@ -1,5 +1,5 @@
 # spring-boot-mvc-http-logging
-Eexample of Spring MVC RestControllers and RestTemplates HTTP traffic logging, with tests configured as Spring WebMvcTest
+Example of Spring MVC RestControllers and RestTemplates HTTP traffic logging, with tests configured as Spring WebMvcTest
  and integration test configured to run on deployed application on Tomcat 8 using cargo plugin, and tested with REST-assured.
 
 
