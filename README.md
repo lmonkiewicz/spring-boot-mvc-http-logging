@@ -3,6 +3,8 @@ Example of HTTP logging of Spring MVC RestControllers and RestTemplates traffic,
  and integration test configured to run on deployed application on Tomcat 8 using cargo plugin, and tested with REST-assured.
 
 
+Logs can be found in tomcat /logs/logFile.log and in /target/cargo-tomcat-logs/container.log
+
 ### How to run
 As standard _spring-boot_ app:
 
